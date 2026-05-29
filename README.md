@@ -1,6 +1,6 @@
 # 中文輸入法練習 (Retro Windows 95/98 Replica)
 
-A browser-based, zero-installation replica of the classic Windows 95/98 built-in Chinese typing game (often remembered as "落井下石" or "打磚塊").
+A browser-based, zero-installation replica of the classic Windows 95/98 built-in Chinese typing game.
 
 This project faithfully recreates the nostalgic 1990s aesthetic—battleship gray UIs, pixelated fonts, and motherboard beeps—while modernizing the underlying engine so it runs seamlessly on any modern device using pure Vanilla JavaScript, HTML5, and CSS3.
 
