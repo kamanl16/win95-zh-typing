@@ -1,0 +1,100 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #008080;
+    /* Windows 95 default background teal */
+    overflow: hidden;
+}
+
+#app-window {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: 8px;
+    gap: 8px;
+}
+
+#game-canvas {
+    flex-grow: 1;
+    background-color: #000000;
+    /* Stark black for retro canvas */
+    position: relative;
+    overflow: hidden;
+    border: 2px solid;
+    border-color: inset;
+}
+
+.falling-char {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-color: #c0c0c0;
+    color: #000080;
+    /* Dark blue */
+    font-family: 'MingLiU', 'MS Sans Serif', 'SimSun', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Windows 95 button border effect */
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    box-sizing: border-box;
+
+    /* Force pixelated font rendering */
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+    text-shadow: none;
+    user-select: none;
+}
+
+#ime-input {
+    width: 80%;
+    font-family: 'MingLiU', 'MS Sans Serif', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MingLiU', 'MS Sans Serif', sans-serif;
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+    z-index: 10;
+}
+
+#game-over-screen h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}

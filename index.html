@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文輸入法練習</title>
+    <!-- 98.css for Retro Windows 95/98 styling -->
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="window" id="app-window">
+        <div class="title-bar">
+            <div class="title-bar-text">中文輸入法練習 - zh-typing.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="status-bar" id="top-status">
+                <p class="status-bar-field">Score: <span id="score-display">0</span></p>
+                <p class="status-bar-field">Lives: <span id="lives-display">5</span></p>
+                <p class="status-bar-field">
+                    <button id="start-btn">Start Game</button>
+                </p>
+            </div>
+
+            <div id="game-canvas" class="sunken-panel">
+                <!-- Falling characters will be dynamically appended here as DOM elements -->
+                <div id="game-over-screen" class="hidden">
+                    <h2>Game Over</h2>
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <button id="restart-btn">Play Again</button>
+                </div>
+            </div>
+
+            <div class="status-bar" id="bottom-status">
+                <p class="status-bar-field" style="width: 70%;">
+                    Type Here:
+                    <!-- The hidden input pipeline -->
+                    <input type="text" id="ime-input" autocomplete="off" spellcheck="false"
+                        placeholder="Waiting for input..." />
+                </p>
+                <p class="status-bar-field" style="width: 30%;">
+                    Last Typed: <span id="last-typed-display"
+                        style="color: darkblue; font-weight: bold; margin-left: 5px;"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
